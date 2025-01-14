@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josefin Enehage - Developer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content-left">
+            <h1>Josefin Enehage</h1>
+            <h2>Software Developer</h2>
+            <p>
+                Hi there! 👋 I’m Josefin — a software developer who’s spent the past years diving into JavaScript 
+                and Vue to build cool, user-friendly stuff. I’ve got a master’s degree in Information Systems from 
+                Lund University, but more importantly, I love solving tricky problems and making tech work like magic. 
+                Outside of work, I love spending time with my family or curling up on the couch with a good book.
+            </p> 
+            <p>
+                Curious to learn more? Connect with me on 
+                <a href="https://www.linkedin.com/in/josefin-enehage/">LinkedIn</a> or drop me an 
+                <a href="mailto:josefin.enehage@gmail.com">email</a>!
+            </p>
+        </div>
+        <div class="content-right">
+            <div class="image-wrapper">
+                <img src="images/me.jpg" alt="Josefin Enehage profile picture">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #A44842;
+        color: #fff;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 10%;
+    }
+
+    .content-left {
+        max-width: 600px;
+    }
+
+    .content-left h1 {
+        font-size: 48px;
+        margin-bottom: 0;
+    }
+
+    .content-left h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .content-left p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .content-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5%;
+    }
+
+    a {
+        font-weight: bold;
+        color:  #f2c934;
+        text-decoration: none;
+    }
+
+    .image-wrapper {
+        width: 250px;
+        height: auto;
+    }
+
+    .image-wrapper img {
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 5%;
+        }
+
+        .content-left h1 {
+            font-size: 36px;
+        }
+
+        .content-left h2 {
+            font-size: 20px;
+        }
+
+        .content-left p {
+            font-size: 16px; 
+        }
+
+        .image-wrapper {
+            width: 100%;
+            max-width: 250px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .content-left h1 {
+            font-size: 28px;
+        }
+
+        .content-left h2 {
+            font-size: 18px;
+        }
+
+        .content-left p {
+            font-size: 14px;
+        }
+
+        .image-wrapper {
+            max-width: 200px;
+        }
+    }
+</style>
