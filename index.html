@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Josefin Enehage - Developer</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content-left">
+                <h1 class="animate-in">Josefin Enehage</h1>
+                <h2 class="animate-in">Software Developer</h2>
+                <p class="animate-in">
+                    Hi there! <span class="wave">👋</span> I'm Josefin — a software developer who's spent the past years diving into JavaScript 
+                    and Vue to build cool, user-friendly stuff. I've got a master's degree in Information Systems from 
+                    Lund University, but more importantly, I love solving tricky problems and making tech work like magic. 
+                    Outside of work, I love spending time with my family or curling up on the couch with a good book.
+                </p> 
+                <p class="animate-in">
+                    Curious to learn more? Connect with me on 
+                    <a href="https://www.linkedin.com/in/josefin-enehage/">LinkedIn</a> or drop me an 
+                    <a href="mailto:josefin.enehage@gmail.com">email</a>!
+                </p>
+            </div>
+            <div class="content-right">
+                <div class="image-wrapper animate-in">
+                    <img src="images/me.png" alt="Profile picture">
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f7efdf 0%, #f0e4d0 100%);
+            color: #4a3728;
+            border: 20px solid white;
+            min-height: 100vh;
+            box-sizing: border-box;
+            position: relative;
+            overflow-x: hidden;
+        }
+    
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 10%;
+            position: relative;
+            z-index: 2;
+        }
+    
+        .content-left {
+            max-width: 600px;
+        }
+    
+        .content-left h1 {
+            font-size: 48px;
+            margin-bottom: 0;
+            background: linear-gradient(135deg, #4a1526, #6b1e3d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+    
+        .content-left h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #6b1e3d;
+            font-weight: 500;
+        }
+    
+        .content-left p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #5a1b2e;
+        }
+    
+        .content-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5%;
+        }
+    
+        a {
+            font-weight: bold;
+            color: #c44569;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+    
+        a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #c44569, #e91e63);
+            transition: width 0.3s ease;
+        }
+    
+        a:hover {
+            color: #e91e63;
+            transform: translateY(-1px);
+        }
+    
+        a:hover::before {
+            width: 100%;
+        }
+    
+        .image-wrapper {
+            width: 350px;
+        }
+    
+        .image-wrapper img {
+            max-width: 100%;
+            border-radius: 20px;
+        }
+    
+        .wave {
+            display: inline-block;
+            animation: wave 2s ease-in-out infinite;
+            transform-origin: 70% 70%;
+        }
+    
+        .animate-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideInUp 0.8s ease forwards;
+        }
+    
+        .animate-in:nth-child(1) { animation-delay: 0.2s; }
+        .animate-in:nth-child(2) { animation-delay: 0.4s; }
+        .animate-in:nth-child(3) { animation-delay: 0.6s; }
+        .animate-in:nth-child(4) { animation-delay: 0.8s; }
+        .content-right .animate-in { animation-delay: 1s; }
+    
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            20% { transform: rotate(25deg); }
+            40% { transform: rotate(-10deg); }
+            60% { transform: rotate(25deg); }
+            80% { transform: rotate(0deg); }
+        }
+    
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, transparent, rgba(204, 132, 0, 0.1), transparent);
+            opacity: 0;
+            animation: pulse 4s ease-in-out infinite;
+            z-index: -1;
+        }
+    
+        @keyframes pulse {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+    
+        @media (max-width: 768px) {
+            .container {
+                padding: 5%;
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            .content-right {
+                margin-left: 0;
+                margin-top: 2rem;
+            }
+    
+            .content-left h1 {
+                font-size: 36px;
+            }
+    
+            .content-left h2 {
+                font-size: 20px;
+            }
+    
+            .content-left p {
+                font-size: 16px; 
+            }
+    
+            .image-wrapper {
+                max-width: 280px;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .content-left h1 {
+                font-size: 28px;
+            }
+    
+            .content-left h2 {
+                font-size: 18px;
+            }
+    
+            .content-left p {
+                font-size: 14px;
+            }
+    
+            .image-wrapper {
+                max-width: 250px;
+            }
+        }
+    </style>
